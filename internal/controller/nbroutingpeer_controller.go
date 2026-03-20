@@ -478,7 +478,7 @@ func (r *NBRoutingPeerReconciler) handleGroup(ctx context.Context, req ctrl.Requ
 						BlockOwnerDeletion: util.Ptr(true),
 					},
 				},
-				Finalizers: []string{"netbird.io/group-cleanup", "netbird.io/routing-peer-cleanup"},
+				Finalizers: []string{"netbird.io/routing-peer-cleanup"},
 				Labels:     r.DefaultLabels,
 			},
 			Spec: netbirdiov1.NBGroupSpec{

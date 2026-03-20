@@ -833,7 +833,7 @@ var _ = Describe("NBResource Controller", func() {
 							nbGroup := &netbirdiov1.NBGroup{}
 							Expect(k8sClient.Get(ctx, types.NamespacedName{Namespace: "default", Name: "meow3"}, nbGroup)).To(Succeed())
 							Expect(nbGroup.OwnerReferences).To(HaveLen(1))
-							Expect(nbGroup.Finalizers).To(ConsistOf([]string{"netbird.io/group-cleanup", "netbird.io/resource-cleanup"}))
+							Expect(nbGroup.Finalizers).To(ConsistOf([]string{GroupFinalizer, "netbird.io/resource-cleanup"}))
 						})
 					})
 				})

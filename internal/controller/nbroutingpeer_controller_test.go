@@ -465,7 +465,7 @@ var _ = Describe("NBRoutingPeer Controller", func() {
 							ObjectMeta: metav1.ObjectMeta{
 								Name:       typeNamespacedName.Name,
 								Namespace:  typeNamespacedName.Namespace,
-								Finalizers: []string{"netbird.io/routing-peer-cleanup", "netbird.io/group-cleanup"},
+								Finalizers: []string{"netbird.io/routing-peer-cleanup", GroupFinalizer},
 							},
 							Spec: netbirdiov1.NBGroupSpec{
 								Name: controllerReconciler.ClusterName,

@@ -48,9 +48,8 @@ var _ = Describe("NBGroup Controller", func() {
 			if err == nil || errors.IsNotFound(err) {
 				nbGroup = netbirdiov1.NBGroup{
 					ObjectMeta: v1.ObjectMeta{
-						Name:       resourceName,
-						Namespace:  typeNamespacedName.Namespace,
-						Finalizers: []string{"netbird.io/group-cleanup"},
+						Name:      resourceName,
+						Namespace: typeNamespacedName.Namespace,
 					},
 					Spec: netbirdiov1.NBGroupSpec{
 						Name: resourceName,

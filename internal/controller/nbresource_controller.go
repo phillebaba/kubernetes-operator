@@ -521,7 +521,7 @@ func (r *NBResourceReconciler) handleGroups(ctx context.Context, req ctrl.Reques
 							BlockOwnerDeletion: util.Ptr(true),
 						},
 					},
-					Finalizers: []string{"netbird.io/group-cleanup", "netbird.io/resource-cleanup"},
+					Finalizers: []string{"netbird.io/resource-cleanup"},
 					Labels:     r.DefaultLabels,
 				},
 				Spec: netbirdiov1.NBGroupSpec{
