@@ -24,6 +24,12 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &apiv1alpha1.GroupSpecApplyConfiguration{}
 	case v1alpha1.SchemeGroupVersion.WithKind("GroupStatus"):
 		return &apiv1alpha1.GroupStatusApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("NetworkResource"):
+		return &apiv1alpha1.NetworkResourceApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("NetworkResourceSpec"):
+		return &apiv1alpha1.NetworkResourceSpecApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("NetworkResourceStatus"):
+		return &apiv1alpha1.NetworkResourceStatusApplyConfiguration{}
 	case v1alpha1.SchemeGroupVersion.WithKind("ResourceReference"):
 		return &apiv1alpha1.ResourceReferenceApplyConfiguration{}
 	case v1alpha1.SchemeGroupVersion.WithKind("RoutingPeer"):
